@@ -2,13 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import * as bootstrap from 'bootstrap'
+import 'bootstrap';
+import ItemListContainer from './container/itemlistcontainer';
+
 
 
 function App() {
   return (
     <div className="App">
       <Navbar/>  
+      <ItemListContainer greeting="Hola...en este lugar pondré mi tienda." color="text-primary"/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

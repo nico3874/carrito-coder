@@ -1,3 +1,7 @@
+import CartWidget from "./CartWidget";
+
+
+
 
 
 const Navbar = () => {
@@ -9,7 +13,7 @@ const Navbar = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div className="navbar-nav navbar-center">
+                    <div className="navbar-nav mx-auto">
                         <a className="nav-link active" aria-current="page" href="https://#">Home</a>
                         <a className="nav-link" href="https://#">Iluminación</a>
                         <a className="nav-link" href="https://#">Seguridad</a>
@@ -17,9 +21,12 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+            <CartWidget/>
         </nav>
 
     )
 }
+
+
 
 export default Navbar;

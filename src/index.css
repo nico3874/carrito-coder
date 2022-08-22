@@ -12,8 +12,7 @@ code {
     monospace;
 }
 
-.navbar-nav.navbar-center {
-  position: absolute;
-  left: 50%;
-  transform: translatex(-50%);
+.marginCart{
+  margin-right: 100px;
+  transform: scale(0.3);
 }
