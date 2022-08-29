@@ -1,6 +1,13 @@
+
+import ItemCount from "./itemCount"
+
+
 const ItemListContainer = ({greeting, color}) =>{
-    return (<h2 className={color}>{greeting}</h2>
-            
+    return (
+        <div>   
+            <h2 className={color}>{greeting}</h2>
+            <ItemCount initial={1} stockInit={10} product="Luces inteligentes"/> 
+       </div>     
     )
 }
 
