@@ -7,11 +7,14 @@ import ItemListContainer from './container/itemlistcontainer';
 
 
 
+
 function App() {
+  
   return (
     <div className="App">
       <Navbar/>  
       <ItemListContainer greeting="Hola...en este lugar pondré mi tienda." color="text-primary"/>
+      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -26,7 +29,9 @@ function App() {
           Learn React
         </a>
       </header>
+     
     </div>
+    
   );
 }
 
