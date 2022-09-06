@@ -4,11 +4,11 @@
 
 {
     "products":[
-        {"id":"1", "title":"Alexa", "price":"19.800","picture":"https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/styles/bi_575x431/public/media/image/2018/11/asistente-alexa-amazon-estrena-windows-10.jpg?itok=fxbny_q5"},
-        {"id":"2", "title":"Goolge Nest", "price":"17.800","picture":"https://d500.epimg.net/cincodias/imagenes/2021/01/05/gadgets/1609833897_804640_1609833964_noticia_normal.jpg"},
-        {"id":"3", "title":"Luces Inteligentes", "price":"2.800","picture":"https://www.lucesinteligentes.es/wp-content/uploads/2019/03/Mejores-bombillas-inteligentes-home.jpg"},
-        {"id":"4", "title":"Teclas Inteligentes", "price":"3.800","picture":"https://ecoled.ec/wp-content/uploads/2022/04/productos-76-300x300.jpg"},
-        {"id":"5", "title":"Cortinas Automaticas", "price":"25.600","picture":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYH8CS9cO0qOXqLVfS7KRxQ40tFnm1DVfYgNQV1NxfvGh349M8oB2VIk6ZS7lEPIsxOUg&usqp=CAU"},
-        {"id":"6", "title":"Camaras", "price":"30.800","picture":"https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2020/08/27/15984832547785.jpg"}
+        {"id":"1", "title":"Alexa", "price":"19.800","description":"Alexa es el sistente de voz por excelencia en el mercado, con miles de skills para integrar con otros software y elementos de domótica","picture":"https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/styles/bi_575x431/public/media/image/2018/11/asistente-alexa-amazon-estrena-windows-10.jpg?itok=fxbny_q5"},
+        {"id":"2", "title":"Goolge Nest", "price":"17.800","description":"Ok Google! Estas simples palabras no permiten controlar nuestros dispositivos, escuchar música y obtener información","picture":"https://d500.epimg.net/cincodias/imagenes/2021/01/05/gadgets/1609833897_804640_1609833964_noticia_normal.jpg"},
+        {"id":"3", "title":"Luces Inteligentes", "price":"2.800","description":"Luces led RGB inteligentes, controlable desde nuestros dispositivos móviles. También pueden vincularse con Alexa y Google Nest","picture":"https://www.lucesinteligentes.es/wp-content/uploads/2019/03/Mejores-bombillas-inteligentes-home.jpg"},
+        {"id":"4", "title":"Teclas Inteligentes", "price":"3.800","description":"Teclas táctiles, comanda las luces de casa con tu celular, también puedes hacerlo con tus asistentes de voz","picture":"https://ecoled.ec/wp-content/uploads/2022/04/productos-76-300x300.jpg"},
+        {"id":"5", "title":"Cortinas Automaticas", "price":"25.600","description":"Motor para cortina con control con wfi, se puede manjar desde cualquir dispositivo","picture":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYH8CS9cO0qOXqLVfS7KRxQ40tFnm1DVfYgNQV1NxfvGh349M8oB2VIk6ZS7lEPIsxOUg&usqp=CAU"},
+        {"id":"6", "title":"Camaras", "price":"30.800","description":"La seguridad es fundamental para nuestra tranquilidad. Ten tu casa vigilada en todo momento, monitoreando desde tu celular","picture":"https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2020/08/27/15984832547785.jpg"}
     ]
 }

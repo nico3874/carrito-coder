@@ -4,6 +4,7 @@ import Navbar from './components/navBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import ItemListContainer from './container/itemlistcontainer';
+import ItemDetailContainer from './container/itemDetailContainer';
 
 
 
@@ -13,7 +14,8 @@ function App() {
   return (
     <div className="App">
       <Navbar/>  
-      <ItemListContainer greeting="Hola...en este lugar pondré mi tienda." color="text-primary"/>
+      <ItemListContainer greeting="Tienda de Domótica" color="text-primary"/>
+      <ItemDetailContainer/>
       
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
