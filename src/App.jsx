@@ -6,31 +6,24 @@ import 'bootstrap';
 import ItemListContainer from './container/itemlistcontainer';
 import ItemDetailContainer from './container/itemDetailContainer';
 
+import {BrowserRouter, Routes, Route, useParams} from "react-router-dom"
+
+
 
 
 
 function App() {
   
-  return (
+  return (  
     <div className="App">
-      <Navbar/>  
-      <ItemListContainer greeting="Tienda de Domótica" color="text-primary"/>
-      <ItemDetailContainer/>
-      
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Navbar/> 
+          <Routes>
+            <Route path="/" element={<ItemListContainer greeting="Tienda de Domótica" color="text-primary"/>} />
+            <Route path="/category/:categoryFilter" element={<ItemListContainer/>} />
+            <Route path="/itemDetail/:idItem" element={<ItemDetailContainer/>}/>
+          </Routes>
+      </BrowserRouter>
      
     </div>
     

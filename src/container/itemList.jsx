@@ -1,23 +1,23 @@
 
 import Item from "../components/item";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 
 const ItemList = () => {
 
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState([]);
+    const {categoryFilter} = useParams();
 
-    useEffect(()=>{
-       setTimeout(()=>obtenerDatos(), 3000)
-    },[])
-
+    
   
     const obtenerDatos = async ()=>{
       try{
-        const data = await fetch ("productJson.json");
+        
+        const data = await fetch ('/productJson.json');
         const product = await data.json();
-        console.log(product.products);
-        setProducts(product.products);
+        categoryFilter ? setProducts(product.products.filter(element =>element.category === categoryFilter)) : setProducts(product.products)
+        
       } catch(e) {
             console.log("Error en datos")
 
@@ -26,10 +26,16 @@ const ItemList = () => {
         
     }
 
+
+    useEffect(()=>{
+     
+      obtenerDatos()
+   },[categoryFilter])
+
     return(
         <div className="d-flex flex-column align-items-center">
             {products.map(item=>(
-                <Item key={item.id} title={item.title} price={item.price} picture={item.picture}/>
+                <Item key={item.id} id={item.id} title={item.title} price={item.price} picture={item.picture}/>
             ))}
         </div>
     )

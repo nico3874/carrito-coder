@@ -1,6 +1,8 @@
+import { useParams } from "react-router-dom"
 
 
 const ItemDetail = ({ id, title, price, picture, description }) => {
+   
     return (
         <div  
             className="card m-5" style={{"width": "40rem"}}>
