@@ -39,7 +39,6 @@ const ItemDetailContainer = ()=>{
      
 
     return(console.log(item),
-        
         <div className="d-flex flex-column align-items-center">
             <ItemDetail id={item.id} title={item.title} price={item.price} description={item.description} picture={item.picture} stockInit={item.stock} />
                   

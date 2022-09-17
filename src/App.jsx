@@ -22,6 +22,7 @@ function App() {
             <Route path="/" element={<ItemListContainer greeting="Tienda de Domótica" color="text-primary"/>} />
             <Route path="/category/:categoryFilter" element={<ItemListContainer/>} />
             <Route path="/itemDetail/:idItem" element={<ItemDetailContainer/>}/>
+            <Route path="/cart"/>
           </Routes>
       </BrowserRouter>
      

@@ -7,25 +7,21 @@ const ItemCount = ({cantidad, setCantidad, stock, setStock, cart, setCart, initi
 
     
     const subtraction = ()=>{
-        (cantidad >1 && cantidad <= stock) && setCantidad(cantidad -1); 
-        cantidad >1 && setStock(stock+1)
+        (cantidad >1 ) && setCantidad(cantidad -1); 
+        
     };
     const add = ()=>{
-        (cantidad>=0 && cantidad < stock) && setCantidad(cantidad + 1); 
-        stock>0 && setStock(stock-1)
+        if(cantidad<stock){
+            (cantidad>=0 && stock>0) && setCantidad(cantidad + 1); 
+        }
+        
+        
+        console.log(stock)
     };
 
-    const cartReset = ()=>{
-        setStock(stock);
-        setCart(0);
-        setCantidad(initial);
-    }
 
     
     return (
-        console.log(stock),
-        console.log(cantidad),
-        console.log(stock),
         <div className= {visible} >
             <h2>{product} </h2>
             <h5>(Disponibles {stock})</h5>
@@ -35,16 +31,11 @@ const ItemCount = ({cantidad, setCantidad, stock, setStock, cart, setCart, initi
                 <button className="btn btn-primary" onClick={() => {add()}}>+</button>
                 
             </div>
-            {/* <div>
-                <button className="btn btn-primary mt-3 mb-3" onClick={()=>{onAdd()}}>Agregar al carrito</button>
-            </div>
+            
             <div>
-                <button className="btn btn-primary mt-1 mb-3" onClick={()=>{cartReset()}}>Quitar Producto</button>
-            </div> */}
-            <div>
-                <button className="btn btn-primary mt-1 mb-3" onClick={onAdd}>Finalizar Compra</button>
+                <button className="btn btn-primary mt-1 mb-3" onClick={onAdd}>Agregar al carrito</button>
             </div>
-            <h2>Tienes {cart} productos en el carrito</h2>
+            
         </div>
     )
     

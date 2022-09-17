@@ -1,24 +1,35 @@
 
-import { useState } from "react"
-import ItemCount from "../container/itemCount"
+import { useState } from "react";
+import ItemCount from "../container/itemCount";
+import { Link } from "react-router-dom";
 
 
 const ItemDetail = ({ id, title, price, picture, description, stockInit }) => {
-    console.log(stockInit)
+    console.log(typeof(title))
+    
     const [cantidad, setCantidad] = useState(1);
-    const [stock, setStock] = useState(+(stockInit));
-    const [] = useState(0);
+    const [stock, setStock] = useState(10);
     const [visible, setVisible] = useState("")
-
+    const [btnVisible, setBtnVisible] = useState("invisible")
+    
+   
     const onAdd = ()=>{
         console.log(`Hay ${cantidad} productos`)
         if(cantidad>0 && cantidad <= stock){
             setVisible("invisible");
             setStock(stock-cantidad);
-            setCantidad(1);
+            setBtnVisible ("d-grid gap-2")
             
         }
     }
+
+    const cartReset = ()=>{
+        setVisible("")
+        setBtnVisible("invisible")
+        setCantidad(1);
+        setStock(10)    
+    }
+
     
     return (
         <div  
@@ -30,10 +41,16 @@ const ItemDetail = ({ id, title, price, picture, description, stockInit }) => {
                     <h5 className="card-text">${price}</h5>
                     <h6 className="card-text">(Disponibles {stock})</h6>
                 </div>
+                <div className={btnVisible}>
+                    <h3>Hay {cantidad} productos en tu carrito</h3>
+                    <Link  to={"/cart"}><button className="btn btn-primary mb-3">Finaliza tu compra </button></Link>
+                    
+                    <button className="btn btn-primary" onClick={()=>cartReset()}>Vuelve a empezar </button>
+                </div>
                 <ItemCount product="Luces inteligentes" onAdd={onAdd} setCantidad={setCantidad} cantidad = {cantidad} setStock={setStock} stock={stock} visible={visible} /> 
         </div>
     )
 }
 
-
+    
 export default ItemDetail
