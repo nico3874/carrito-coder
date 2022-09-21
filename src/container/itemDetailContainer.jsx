@@ -18,8 +18,7 @@ const ItemDetailContainer = ()=>{
       try{
         const data = await fetch ('/productJson.json');
         const product = await data.json();
-        console.log(product.products);
-        console.log(idItem)
+        
         product.products.forEach(element => {
           +(element.id) ===+(idItem) && setItem(element) 
         });
@@ -38,9 +37,9 @@ const ItemDetailContainer = ()=>{
     }, [idItem])
      
 
-    return(console.log(item),
+    return(
         <div className="d-flex flex-column align-items-center">
-            <ItemDetail id={item.id} title={item.title} price={item.price} description={item.description} picture={item.picture} stockInit={item.stock} />
+            <ItemDetail item={item} />
                   
         </div>
         
