@@ -7,7 +7,7 @@ import { Context } from "../contexts/cartContext";
 
 const ItemDetail = ({item }) => {
     
-    
+    console.log(item)
     const [cantidad, setCantidad] = useState(1);
     const [stock, setStock] = useState(10);
     const [visible, setVisible] = useState("")

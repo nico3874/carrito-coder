@@ -3,6 +3,7 @@ import ItemDetail from "../components/itemDetail"
 import  {useState, useEffect} from "react"
 import { useParams } from "react-router-dom"
 import ItemCount from "./itemCount"
+import { doc, getDoc, getFirestore } from "firebase/firestore"
 
 
 const ItemDetailContainer = ()=>{
@@ -14,19 +15,20 @@ const ItemDetailContainer = ()=>{
     
     
             
-    const getItem = async ()=>{
-      try{
-        const data = await fetch ('/productJson.json');
-        const product = await data.json();
+    const getItem = ()=>{
+    
+      const db = getFirestore();
+      const itemRef = doc(db, 'products', idItem); 
+      getDoc(itemRef).then((snapshot)=>{
         
-        product.products.forEach(element => {
-          +(element.id) ===+(idItem) && setItem(element) 
-        });
-
-      } catch(e) {
-            console.log("Error en datos")
-
-      }
+        const product = {
+          id: snapshot.id,
+          ...snapshot.data()
+        };
+        setItem(product)
+      })                                                   
+     
+    
       
         
     }
@@ -38,6 +40,7 @@ const ItemDetailContainer = ()=>{
      
 
     return(
+        console.log(item),
         <div className="d-flex flex-column align-items-center">
             <ItemDetail item={item} />
                   
