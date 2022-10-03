@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { Context } from "../contexts/cartContext"
 import CartItem from "./cartItem"
 import {Link} from "react-router-dom"
+import ContactForm from "./contactForm";
 
 const Cart = ()=>{
     const {cart, clear} = useContext(Context);
@@ -17,6 +18,7 @@ const Cart = ()=>{
             <h2>Valor total de la compra</h2>
             <h3>{cart.length>0 && cart.map(e=>(e.quantity*e.price)).reduce((prev, curr) => prev + curr, 0)}</h3>
         </div>
+        <ContactForm/>
         </>
 )}else{
     return (

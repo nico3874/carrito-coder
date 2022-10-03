@@ -40,7 +40,7 @@ const ItemDetailContainer = ()=>{
      
 
     return(
-        console.log(item),
+        
         <div className="d-flex flex-column align-items-center">
             <ItemDetail item={item} />
                   
