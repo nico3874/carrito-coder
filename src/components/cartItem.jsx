@@ -1,28 +1,39 @@
+
 import { useContext } from "react"
 import { Context } from "../contexts/cartContext"
-import ContactForm from "./contactForm"
 
 
 
+const CartItem = ({ item }) => {
 
-
-const CartItem = ({item})=>{
-
-    const{removeItem} = useContext(Context)
-    const btnRemove=()=>{
-    removeItem(item.id)
-   } 
-
-    return(
+    const { removeItem } = useContext(Context)
+    const btnRemove = () => {
+        removeItem(item.id);
         
-        <div>
-            <h2>{item.title} - {item.quantity} -  ${(+item.price)*(+item.quantity)}</h2>
-            <button onClick={btnRemove}>Eliminar producto</button>
-            
-        </div>
-       
+    }
     
-       
-)}
+
+    return (
+        
+            <div className="row cartItem" >
+                <div className="col-6 " >
+                    <img className="img-fluid" src={item.picture} alt="foto de producto" />
+                </div>
+                <div className="col-6">
+                    <h2>{item.title}</h2>
+                    <h3>Cantidad {item.quantity}</h3>
+                    <h3>Total ${(+item.price)*(+item.quantity)}</h3>
+                    <div>
+                        <button className="btn btn-primary btn-lg mt-5 ms-5" onClick={btnRemove}>Eliminar producto</button>
+                    </div>
+                </div>
+
+                
+            </div>
+        
+    )
+}
 
 export default CartItem
+
+

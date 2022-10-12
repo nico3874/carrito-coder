@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import CartWidget from "./CartWidget";
+import CartWidget from "./cartWidget";
 
 
 

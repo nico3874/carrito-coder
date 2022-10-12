@@ -4,11 +4,13 @@
 import ItemList from "./itemList"
 
 
-const ItemListContainer = ({greeting, color}) =>{
+const ItemListContainer = () =>{
     return (
-        <div>   
-            <h2 className={color}>{greeting}</h2>
+        <div className="container mt-5">
+           
+            <h1>Nuestra Tienda</h1>
             <ItemList/> 
+              
             
        </div>     
     )

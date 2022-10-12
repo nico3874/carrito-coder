@@ -1,9 +1,9 @@
+
 import React, { useState } from "react";
 
 
 const ItemCount = ({cantidad, setCantidad, stock, setStock, cart, setCart, initial, product, onAdd, visible} ) => {
     
-
 
     
     const subtraction = ()=>{
@@ -11,14 +11,12 @@ const ItemCount = ({cantidad, setCantidad, stock, setStock, cart, setCart, initi
         
     };
     const add = ()=>{
-        if(cantidad<stock){
+       
             (cantidad>=0 && stock>0) && setCantidad(cantidad + 1); 
-        }
+            
         
         
-        console.log(stock)
     };
-
 
     
     return (
@@ -33,7 +31,7 @@ const ItemCount = ({cantidad, setCantidad, stock, setStock, cart, setCart, initi
             </div>
             
             <div>
-                <button className="btn btn-primary mt-1 mb-3" onClick={onAdd}>Agregar al carrito</button>
+                <button className="btn btn-primary mt-1 mb-3 col-6" onClick={onAdd}>Agregar al carrito</button>
             </div>
             
         </div>

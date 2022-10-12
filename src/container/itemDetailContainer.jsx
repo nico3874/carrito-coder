@@ -2,7 +2,6 @@ import React from "react"
 import ItemDetail from "../components/itemDetail"
 import  {useState, useEffect} from "react"
 import { useParams } from "react-router-dom"
-import ItemCount from "./itemCount"
 import { doc, getDoc, getFirestore } from "firebase/firestore"
 
 
@@ -11,9 +10,6 @@ const ItemDetailContainer = ()=>{
   const [item, setItem] = useState([]);
   const {idItem} = useParams();
  
-                                                          
-    
-    
             
     const getItem = ()=>{
     
@@ -28,8 +24,6 @@ const ItemDetailContainer = ()=>{
         setItem(product)
       })                                                   
      
-    
-      
         
     }
 
@@ -42,7 +36,7 @@ const ItemDetailContainer = ()=>{
     return(
         
         <div className="d-flex flex-column align-items-center">
-            <ItemDetail item={item} />
+            <ItemDetail item={item}  />
                   
         </div>
         

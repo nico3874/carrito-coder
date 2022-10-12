@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Prompt', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,7 +12,23 @@ code {
     monospace;
 }
 
-.marginCart{
-  margin-right: 100px;
-  transform: scale(0.3);
+.invisible{
+  display: none;
 }
+
+.marginCart{
+  
+  margin-right: 100px;
+  transform: scale(0.5);
+  margin-top: -50px;
+  
+}
+
+
+.cartItem{
+  transform: scale(0.9);
+  
+}
+
+
+

@@ -36,10 +36,11 @@ const ItemList = () => {
    },[categoryFilter])
 
     return(
-        <div className="d-flex  align-items-center">
+        <div className="d-flex align-items-center row">
             {products.map(item=>(
                 <Item key={item.id} id={item.id} title={item.title} price={item.price} picture={item.picture}/>
             ))}
+            
         </div>
     )
 

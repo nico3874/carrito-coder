@@ -3,23 +3,29 @@ import { Link } from "react-router-dom"
 import { useContext } from "react";
 import { Context } from "../contexts/cartContext";
 
-const CartWidget =()=>{
 
+const CartWidget =()=>{
+    
     const {cart} = useContext(Context)
+
+   
     
     
-    return(
-        <div>
-            {cart.length>0 && <Link to={"/cart"}>
-                <img src={cartImage} alt="cart" className="marginCart"/>
-            </Link>}
-            {cart.length>0 &&
-            <>
-                <h6> {cart.map(e=>(e.quantity)).reduce((prev, curr) => prev + curr, 0)} </h6> 
-            </>}
-        </div>
+    if (cart.length>0){
+        return(
+            <div>
+                <p> {cart.map(e=>(e.quantity)).reduce((prev, curr) => prev + curr, 0)} </p>
+                <Link to={"/cart"}>
+                    <img  src={cartImage} alt="cart" className="marginCart"/>
+                </Link>
+            </div>
+            
         
-    )
+            )
+
+    }
+    
 }
 
 export default CartWidget
+
